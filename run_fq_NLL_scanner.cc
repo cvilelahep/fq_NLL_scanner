@@ -48,7 +48,7 @@ extern"C" {
   
   void trginfo_(float *);
   void vcrdvccm_();
-  //  void mcguts(int *ntracks);
+  void mcguts(int *ntracks);
   
   void aprstbnk_(int *);
   void filldstvars_();
@@ -436,7 +436,7 @@ int main(int argc, char* argv[]){
     
     /* load mc_particle structure */
     int nmctrks;
-    //    mcguts(&nmctrks);
+    mcguts(&nmctrks);
     
     vcrdvccm_();
     trginfo_(&trgofst);
@@ -588,7 +588,7 @@ int main(int argc, char* argv[]){
         thefit->MaskIngates();
       }
       
-      thefit->ScanNLL(imu,snglTrkParams);
+      thefit->ScanNLL();
       break;
     }
     nevt++;
