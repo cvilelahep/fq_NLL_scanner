@@ -90,7 +90,7 @@ int fq_NLL_scanner::ScanNLL(){
   
   double Xtrue[] =  {mc_particle.initial_vertex[itrk][0], mc_particle.initial_vertex[itrk][1], mc_particle.initial_vertex[itrk][2],
                      mc_particle.time[itrk],
-                     mc_particle.dir[itrk][2], atan2(mc_particle.dir[itrk][0], mc_particle.dir[itrk][1]), // Not sure if direction is consistent with rest of fiTQun... CHECK.
+                     acos(mc_particle.dir[itrk][2]), atan2(mc_particle.dir[itrk][1], mc_particle.dir[itrk][0]), // Not sure if direction is consistent with rest of fiTQun... CHECK.
                      mc_particle.momentum[itrk]};
   
 
