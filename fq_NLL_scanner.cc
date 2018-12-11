@@ -13,7 +13,7 @@ using namespace fiTQun_parameters;
 
 extern"C" {
 
-  //  void mcguts(int *ntracks);
+  void mcguts(int *ntracks);
   void trginfo_(float *);
   void vcrdvccm_();
 
